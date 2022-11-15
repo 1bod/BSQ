@@ -14,14 +14,9 @@ jobs:
     - name: make
       run: make
       
-    - name: Push to Epitech repo
-      uses: cpina/github-action-push-to-another-repository@main
-      env:
-          SSH_DEPLOY_KEY: ${{ secrets.SSH_DEPLOY_KEY }}
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+    - uses: pixta-dev/repository-mirroring-action@v1
       with:
-          source-directory: '.'
-          destination-github-username: 'EpitechPromo2027'
-          destination-repository-name: 'B-CPE-110-BDX-1-1-BSQ-maxence.raynal'
-          user-email: maxence.raynal@epitech.eu
-          target-branch: main
+        target_repo_url:
+          git@github.com:EpitechPromo2027/B-CPE-110-BDX-1-1-BSQ-maxence.raynal.git
+        ssh_private_key:
+          ${{ secrets.SSH_DEPLOY_KEY }}
