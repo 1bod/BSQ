@@ -2,29 +2,22 @@ name: C/C++ CI
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    - name: make
-      run: make
-    - name: fclean
-      run: make fclean
-      
-  mirror:
-    runs-on: ubuntu-latest
-    steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
+      - name: make
+        run: make
+      - name: fclean
+        run: make fclean
       - uses: pixta-dev/repository-mirroring-action@v1
         with:
-          target_repo_url:
-            git@github.com:EpitechPromo2027/B-CPE-110-BDX-1-1-BSQ-maxence.raynal.git
-          ssh_private_key:
-            ${{ secrets.SSH_DEPLOY_KEY }}
+          target_repo_url: git@github.com:EpitechPromo2027/B-CPE-110-BDX-1-1-BSQ-maxence.raynal.git
+          ssh_private_key: ${{ secrets.SSH_DEPLOY_KEY }}
