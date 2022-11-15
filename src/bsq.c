@@ -40,7 +40,7 @@ static int start_bsq_gen(const char *const *argv)
 int main(int argc, char const *argv[])
 {
     if (argc < 2) {
-        my_perror("Usage:\t./bsq FILE\n\t./bsq SIZE PATTERN\n");
+        my_perror("Usage:\t./bsq FILE\n\t./bsq SIZE PATTERN\n")
         return (84);
     }
     if (argc == 2) {
