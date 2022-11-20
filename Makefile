@@ -9,6 +9,8 @@ SRC	=	src/bsq.c	\
 		src/bsq_file.c	\
 		src/bsq_gen.c	\
 		src/error_handling.c	\
+		src/file_loading.c	\
+		src/dd_array_processing.c
 
 LIBNAME	=	libmy.a
 
@@ -20,11 +22,11 @@ all:	$(NAME)
 
 $(NAME):
 	make -C lib
-	gcc -I./include $(SRC) -L./ -lmy -o $(NAME)
+	gcc -I./include $(SRC) -L./ -lmy -o $(NAME) -g
 
 clean:
 	make -C lib clean
-	rm -f $(OBJ) *~ *.gcno *.gcda *.log *#
+	rm -f $(OBJ) *~ *.gcno *.gcda *.log *# vgcore.*
 
 fclean:	clean
 	make -C lib fclean

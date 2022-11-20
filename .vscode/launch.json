@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/maxence/B-CPE-101-BDX-1-1-myprintf-alexis.brun",
-      "program": "/home/maxence/B-CPE-101-BDX-1-1-myprintf-alexis.brun/build/Debug/outDebug",
+      "cwd": "/home/maxence/Epitech-2022/B-CPE-110/BSQ",
+      "program": "/home/maxence/Epitech-2022/B-CPE-110/BSQ/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
