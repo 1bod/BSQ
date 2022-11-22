@@ -9,7 +9,8 @@
 #include <stdbool.h>
 #include "bsq.h"
 
-bool is_valid_square_line(char **map, int line, int x, int size) {
+bool is_valid_square_line(char **map, int line, int x, int size)
+{
     for (int ch = x; ch <= x + size - 1; ch++) {
         if (map[line][ch] != '.') {
             return false;
@@ -29,7 +30,7 @@ bool is_valid_square_line(char **map, int line, int x, int size) {
  */
 bool is_square_of_size(char **map, int y, int x, int size)
 {
-    for (int line = y; line <= (y + size - 1) ; line++) {
+    for (int line = y; line <= (y + size - 1); line++) {
         if ((!is_valid_square_line(map, line, x, size))
             || map[line][0] == '\0') {
             return false;
@@ -56,14 +57,24 @@ int find_biggest_square(char **map, int row, int col)
     return size - 1;
 }
 
+void compare_squares(bsq_t *biggest_square, int y, int x, int new_size)
+{
+    if (new_size > biggest_square->size) {
+        biggest_square->pos_y = y;
+        biggest_square->pos_x = x;
+        biggest_square->size = new_size;
+    }
+}
+
 bsq_t run_bsq_algo(char **map, int nb_rows, int nb_cols)
 {
-    bsq_t biggest_square = { 0, 0, 0 };
+    bsq_t biggest_square = {0, 0, 0};
 
-    int x = 0;
-    int y = 0;
-
-    printf("find_biggest_square(x=%i, y=%i) = %i\n", x, y, find_biggest_square(map, y, x));
-    //printf("pos_y: %i; pos_x: %i; size: %i\n", biggest_square.pos_y,
-    //       biggest_square.pos_x, biggest_square.size);
+    for (int y = 1; y < nb_rows; y++) {
+        for (int x = 0; x < nb_cols; x++) {
+            compare_squares(&biggest_square, y, x,
+                            find_biggest_square(map, y, x));
+        }
+    }
+    return biggest_square;
 }
