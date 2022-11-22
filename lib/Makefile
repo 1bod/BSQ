@@ -7,6 +7,7 @@
 
 SRC	=	my_strlen.c	\
 		my_perror.c	\
+		my_getnbr.c	\
 
 NAME	=	libmy.a
 

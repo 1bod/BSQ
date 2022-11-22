@@ -48,17 +48,22 @@ bool is_square_of_size(char **map, int y, int x, int size)
  */
 int find_biggest_square(char **map, int row, int col)
 {
+    int size = 1;
 
+    while (is_square_of_size(map, row, col, size)) {
+        size++;
+    }
+    return size - 1;
 }
 
 bsq_t run_bsq_algo(char **map, int nb_rows, int nb_cols)
 {
     bsq_t biggest_square = { 0, 0, 0 };
 
-    int x = 2;
-    int y = 3;
+    int x = 0;
+    int y = 0;
 
-    //printf("is_square_of_size(x=%i, y=%i) = %i\n", x, y, is_square_of_size(map, y, x, 4));
+    printf("find_biggest_square(x=%i, y=%i) = %i\n", x, y, find_biggest_square(map, y, x));
     //printf("pos_y: %i; pos_x: %i; size: %i\n", biggest_square.pos_y,
     //       biggest_square.pos_x, biggest_square.size);
 }
