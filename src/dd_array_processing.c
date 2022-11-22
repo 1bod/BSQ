@@ -44,7 +44,8 @@ int *get_line_length(char *str)
 char **alloc_2d_array(char *str)
 {
     int *lines_length = get_line_length(str);
-    char **result = malloc(sizeof(char *) * get_line_count(str));
+    int lines = get_line_count(str);
+    char **result = malloc(sizeof(char *) * (lines + 1));
     int line_index = 0;
 
     if (result == NULL) {
@@ -53,10 +54,11 @@ char **alloc_2d_array(char *str)
     for (int i = 0; str[i] != '\0'; i++) {
         if (str[i] == '\n') {
             result[line_index] = malloc(
-                    sizeof(char) * lines_length[line_index]);
+                    sizeof(char) * (lines_length[line_index] + 1));
             line_index++;
         }
     }
+    result[lines] = "\0";
     free(lines_length);
     return result;
 }
@@ -69,6 +71,7 @@ char **str_to_2d_array(char *str)
     for (int pos_y = 0; str[i] != '\0'; pos_y++) {
         for (int pos_x = 0; str[i] != '\0' && str[i] != '\n'; pos_x++) {
             result[pos_y][pos_x] = str[i];
+            result[pos_y][pos_x + 1] = '\0';
             i++;
         }
         i++;
