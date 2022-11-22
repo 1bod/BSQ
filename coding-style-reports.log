@@ -1,0 +1,7 @@
+./lib/libmy.a:1: MAJOR:C-O1
+./lib/my_getnbr.o:1: MAJOR:C-O1
+./lib/my_perror.o:1: MAJOR:C-O1
+./lib/my_putchar.o:1: MAJOR:C-O1
+./lib/my_putstr.o:1: MAJOR:C-O1
+./lib/my_strlen.o:1: MAJOR:C-O1
+./libmy.a:1: MAJOR:C-O1

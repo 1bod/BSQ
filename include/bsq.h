@@ -22,5 +22,6 @@
     char **str_to_2d_array(char *str);
     char **load_2d_array_from_file(char const *filepath);
     bsq_t run_bsq_algo(char **map, int nb_rows, int nb_cols);
+    void display_bsq(bsq_t bsq, char **map, int nb_rows, int nb_cols);
 
 #endif /* !BSQ_H_ */

@@ -12,6 +12,7 @@ SRC	=	src/bsq.c	\
 		src/file_loading.c	\
 		src/dd_array_processing.c	\
 		src/bsq_algo.c	\
+		src/display_bsq.c	\
 
 LIBNAME	=	libmy.a
 

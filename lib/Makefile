@@ -8,6 +8,8 @@
 SRC	=	my_strlen.c	\
 		my_perror.c	\
 		my_getnbr.c	\
+		my_putchar.c	\
+		my_putstr.c	\
 
 NAME	=	libmy.a
 
