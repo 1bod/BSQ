@@ -9,7 +9,7 @@
 #include "bsq.h"
 #include "my.h"
 
-int get_rows(const char *str)
+static int simple_getnbr(const char *str)
 {
     int result = str[0] - '0';
 
@@ -22,7 +22,8 @@ int get_rows(const char *str)
 int bsq_file(const char *path)
 {
     char **full_file = load_2d_array_from_file(path);
-    int nb_rows = get_rows(full_file[0]);
-    bsq_t bsq = run_bsq_algo(full_file, nb_rows, 5);
+    check_map(full_file);
+    bsq_t bsq = run_bsq_algo(full_file,
+        simple_getnbr(full_file[0]), my_strlen(full_file[1]));
     return 0;
 }
