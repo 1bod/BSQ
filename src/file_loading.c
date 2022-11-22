@@ -42,5 +42,6 @@ char **load_2d_array_from_file(char const *filepath)
 {
     char *flat_file = load_file_in_mem(filepath);
     char **file = str_to_2d_array(flat_file);
+    free(flat_file);
     return file;
 }

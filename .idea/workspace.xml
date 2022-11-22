@@ -22,9 +22,9 @@
   <component name="ChangeListManager">
     <list default="true" id="a3452eb0-6092-47e9-9eee-a7dfdf83c9b8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/include/bsq.h" beforeDir="false" afterPath="$PROJECT_DIR$/include/bsq.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bsq" beforeDir="false" afterPath="$PROJECT_DIR$/bsq" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bsq_file.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsq_file.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/file_loading.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/file_loading.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +145,7 @@
       <workItem from="1669017934584" duration="6242000" />
       <workItem from="1669046609079" duration="12000" />
       <workItem from="1669125619826" duration="4414000" />
-      <workItem from="1669133935377" duration="868000" />
+      <workItem from="1669133935377" duration="1540000" />
     </task>
     <servers />
   </component>
@@ -168,7 +168,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/display_bsq.c</url>
-          <line>23</line>
+          <line>24</line>
           <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
