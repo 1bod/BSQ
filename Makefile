@@ -5,8 +5,7 @@
 ## Makefile
 ##
 
-SRC	=	src/bsq.c	\
-		src/bsq_file.c	\
+SRC	=	src/bsq_file.c	\
 		src/bsq_gen.c	\
 		src/error_handling.c	\
 		src/file_loading.c	\
@@ -20,11 +19,17 @@ NAME	=	bsq
 
 OBJ	=	$(SRC:.c=.o)
 
+TEST_OUT	= 	unit_tests
+
+TEST_ARGS	= 	--coverage -lcriterion
+
+MAIN	=	src/bsq.c
+
 all:	$(NAME)
 
 $(NAME):
 	make -C lib
-	gcc -I./include $(SRC) -L./ -lmy -o $(NAME) -g
+	gcc -I./include $(MAIN) $(SRC) -L./ -lmy -o $(NAME) --coverage
 
 clean:
 	make -C lib clean
@@ -32,8 +37,14 @@ clean:
 
 fclean:	clean
 	make -C lib fclean
-	rm -f $(NAME)
+	rm -f $(NAME) $(TEST_OUT)
 
 re:	fclean all
+
+unit_tests: re
+	gcc -I./include -g $(SRC) $(TEST_ARGS) tests/*.c -L./ -lmy -o $(TEST_OUT)
+
+run_tests:	unit_tests
+	./$(TEST_OUT)
 
 .PHONY:	all $(NAME) clean fclean re

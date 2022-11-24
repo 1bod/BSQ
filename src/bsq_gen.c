@@ -9,8 +9,6 @@
 #include "my.h"
 #include "bsq.h"
 
-char *generate_flat_map(int size, const char *pattern);
-
 static int power(int x, int y)
 {
     int result = 1;
@@ -45,7 +43,7 @@ static void put_size(int size, char *str)
     str[i] = '\n';
 }
 
-char *generate_flat_map(int size, const char *pattern)
+static char *generate_flat_map(int size, const char *pattern)
 {
     int n_counter = 0;
     int total_n = 0;

@@ -11,6 +11,8 @@
       <config projectName="BSQ" targetName="bsq" />
       <config projectName="BSQ" targetName="fclean" />
       <config projectName="BSQ" targetName="all" />
+      <config projectName="BSQ" targetName="unit_tests" />
+      <config projectName="BSQ" targetName="run_tests" />
       <config projectName="BSQ" targetName="re" />
     </generated>
   </component>
@@ -21,9 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3452eb0-6092-47e9-9eee-a7dfdf83c9b8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/launch.json" beforeDir="false" afterPath="$PROJECT_DIR$/.vscode/launch.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/my_putstr.c" beforeDir="false" afterPath="$PROJECT_DIR$/lib/my_putstr.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/coding-style-reports.log" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/bsq_gen.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsq_gen.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -120,6 +123,16 @@
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
     </configuration>
+    <configuration name="run_tests" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BSQ" TARGET_NAME="run_tests" CONFIG_NAME="run_tests" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="unit_tests" type="CLionNativeAppRunConfigurationType" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BSQ" TARGET_NAME="unit_tests" CONFIG_NAME="unit_tests" version="1">
+      <method v="2">
+        <option name="CLION.COMPOUND.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -130,6 +143,8 @@
       <item itemvalue="Makefile Application.bsq" />
       <item itemvalue="Makefile Application.fclean" />
       <item itemvalue="Makefile Application.re" />
+      <item itemvalue="Makefile Application.run_tests" />
+      <item itemvalue="Makefile Application.unit_tests" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -149,7 +164,7 @@
       <workItem from="1669192877309" duration="7000" />
       <workItem from="1669278300714" duration="655000" />
       <workItem from="1669287715952" duration="28000" />
-      <workItem from="1669287752240" duration="867000" />
+      <workItem from="1669287752240" duration="2059000" />
     </task>
     <servers />
   </component>
