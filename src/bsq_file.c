@@ -23,7 +23,9 @@ static int simple_getnbr(const char *str)
 int bsq_file(const char *path)
 {
     char **full_file = load_2d_array_from_file(path);
-    check_map(full_file);
+    if (check_map(full_file) == 84) {
+        return 84;
+    }
     int nb_rows = simple_getnbr(full_file[0]);
     int nb_cols = my_strlen(full_file[1]);
     bsq_t bsq = run_bsq_algo(full_file, nb_rows, nb_cols);

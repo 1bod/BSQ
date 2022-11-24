@@ -69,7 +69,9 @@ int bsq_gen(int size, const char *pattern)
     char *flat_map = generate_flat_map(size, pattern);
     char **map = str_to_2d_array(flat_map);
     free(flat_map);
-    check_map(map);
+    if (check_map(map) == 84) {
+        return 84;
+    }
     bsq_t bsq = run_bsq_algo(map, size, size);
     display_bsq(bsq, map, size, size);
     for (int i = 0; i <= size; i++) {

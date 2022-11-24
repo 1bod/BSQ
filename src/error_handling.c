@@ -36,24 +36,24 @@ static int simple_getnbr(const char *str)
     return result;
 }
 
-static void free_and_exit(char **map, char *message)
+static int free_and_exit(char **map, char *message)
 {
     for (int i = 0; map[i][0] != '\0'; i++) {
         free(map[i]);
     }
     free(map);
     my_perror("Invalid map format\n");
-    exit(84);
+    return (84);
 }
 
-static void check_char(char **map, char c)
+static int check_char(char **map, char c)
 {
     if (c != '.' && c != 'o' && c != '\0') {
-        free_and_exit(map, "Invalid map format\n");
+        return free_and_exit(map, "Invalid map format\n");
     }
 }
 
-void check_map(char **map)
+int check_map(char **map)
 {
     int row_count = 0;
     int real_col_count = my_strlen(map[1]);
@@ -64,13 +64,14 @@ void check_map(char **map)
         col_count = 0;
         while (map[y][col_count] != '\0') {
             col_count++;
-            check_char(map, map[y][col_count]);
+            return check_char(map, map[y][col_count]);
         }
         if (col_count != real_col_count) {
-            free_and_exit(map, "Invalid map format\n");
+            return free_and_exit(map, "Invalid map format\n");
         }
     }
     if (row_count != simple_getnbr(map[0])) {
-        free_and_exit(map, "Invalid map format\n");
+        return free_and_exit(map, "Invalid map format\n");
     }
+    return 0;
 }

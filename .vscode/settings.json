@@ -6,11 +6,7 @@
   "C_Cpp_Runner.cStandard": "",
   "C_Cpp_Runner.cppStandard": "",
   "C_Cpp_Runner.useMsvc": false,
-  "C_Cpp_Runner.warnings": [
-    "-Wall",
-    "-Wextra",
-    "-Wpedantic"
-  ],
+  "C_Cpp_Runner.warnings": ["-Wall", "-Wextra", "-Wpedantic"],
   "C_Cpp_Runner.enableWarnings": true,
   "C_Cpp_Runner.warningsAsError": false,
   "C_Cpp_Runner.compilerArgs": [],
@@ -19,10 +15,7 @@
     "${workspaceFolder}/**",
     "${workspaceFolder}/include/**"
   ],
-  "C_Cpp_Runner.includeSearch": [
-    "*",
-    "**/*"
-  ],
+  "C_Cpp_Runner.includeSearch": ["*", "**/*"],
   "C_Cpp_Runner.excludeSearch": [
     "**/build",
     "**/build/**",
@@ -42,5 +35,13 @@
       "binaryPath": "/home/maxence/Epitech-2022/B-CPE-110/B-CPE-110-BDX-1-1-BSQ-maxence.raynal/bsq",
       "binaryArgs": []
     }
-  ]
+  ],
+  "files.associations": {
+    "*.mcmeta": "json",
+    "*.html": "html",
+    "*.pdf": "pdf",
+    "*.py": "python",
+    "*.c": "c",
+    "errno.h": "c"
+  }
 }
