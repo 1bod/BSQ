@@ -6,8 +6,8 @@
 */
 
 #include <stdlib.h>
-#include <stdio.h>
 #include "my.h"
+#include "bsq.h"
 
 char *generate_flat_map(int size, const char *pattern);
 
@@ -71,5 +71,15 @@ char *generate_flat_map(int size, const char *pattern)
 
 int bsq_gen(int size, const char *pattern)
 {
-    generate_flat_map(size, pattern);
+    char *flat_map = generate_flat_map(size, pattern);
+    char **map = str_to_2d_array(flat_map);
+    free(flat_map);
+    check_map(map);
+    bsq_t bsq = run_bsq_algo(map, size, size);
+    display_bsq(bsq, map, size, size);
+    for (int i = 0; i <= size; i++) {
+        free(map[i]);
+    }
+    free(map);
+    return 0;
 }
