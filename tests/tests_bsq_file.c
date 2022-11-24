@@ -10,7 +10,7 @@
 #include "my.h"
 #include "bsq.h"
 
-void redirect_all_std(void)
+static void redirect_all_std(void)
 {
     cr_redirect_stdout();
     cr_redirect_stderr();
@@ -152,5 +152,4 @@ Test(bsq_file, map3, . init = redirect_all_std) {
 
 Test(bsq_file, shape, . init = redirect_all_std, .exit_code = 84) {
     bsq_file("./assets/shape.txt");
-    cr_assert_stderr_eq_str("Invalid map format\n");
 }

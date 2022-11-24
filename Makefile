@@ -29,7 +29,7 @@ all:	$(NAME)
 
 $(NAME):
 	make -C lib
-	gcc -I./include $(MAIN) $(SRC) -L./ -lmy -o $(NAME) --coverage
+	gcc -I./include $(MAIN) $(SRC) -L./ -lmy -o $(NAME)
 
 clean:
 	make -C lib clean
