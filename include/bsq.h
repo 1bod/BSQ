@@ -14,7 +14,6 @@
         int size;
     } bsq_t;
 
-
     void check_map(char **map);
     int check_file_error(const char *path);
     int bsq_gen(int size, const char *pattern);

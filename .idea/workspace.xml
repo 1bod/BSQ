@@ -21,8 +21,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3452eb0-6092-47e9-9eee-a7dfdf83c9b8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/bsq_file.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsq_file.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/error_handling.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/error_handling.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/bsq_gen.c" beforeDir="false" afterPath="$PROJECT_DIR$/src/bsq_gen.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,12 +98,7 @@
   }
 }</component>
   <component name="RunManager" selected="Makefile Application.all">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="all" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="assets/map2.txt" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BSQ" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="bsq">
+    <configuration name="all" type="CLionNativeAppRunConfigurationType" PROGRAM_PARAMS="10 &quot;...ooo...&quot;" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" WORKING_DIR="file://$PROJECT_DIR$" PASS_PARENT_ENVS_2="true" PROJECT_NAME="BSQ" TARGET_NAME="all" CONFIG_NAME="all" version="1" RUN_PATH="bsq">
       <method v="2">
         <option name="CLION.COMPOUND.BUILD" enabled="true" />
       </method>
@@ -144,6 +139,8 @@
       <workItem from="1669046609079" duration="12000" />
       <workItem from="1669125619826" duration="4414000" />
       <workItem from="1669133935377" duration="2219000" />
+      <workItem from="1669192877309" duration="7000" />
+      <workItem from="1669278300714" duration="655000" />
     </task>
     <servers />
   </component>
@@ -165,30 +162,16 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/display_bsq.c</url>
-          <line>24</line>
-          <option name="timeStamp" value="9" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/error_handling.c</url>
           <line>51</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/bsq_gen.c</url>
+          <line>30</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
-    <watches-manager>
-      <configuration name="CLionNativeAppRunConfigurationType">
-        <watch expression="map[line][ch]" language="ObjectiveC" />
-        <watch expression="map[0]" language="ObjectiveC" />
-        <watch expression="map[1]" language="ObjectiveC" />
-        <watch expression="map[2]" language="ObjectiveC" />
-        <watch expression="map[3]" language="ObjectiveC" />
-        <watch expression="map[4]" language="ObjectiveC" />
-        <watch expression="map[5]" language="ObjectiveC" />
-        <watch expression="map[14]" language="ObjectiveC" />
-        <watch expression="map[15]" language="ObjectiveC" />
-        <watch expression="map[16]" language="ObjectiveC" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

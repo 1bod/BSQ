@@ -10,6 +10,7 @@ SRC	=	my_strlen.c	\
 		my_getnbr.c	\
 		my_putchar.c	\
 		my_putstr.c	\
+		my_intlen.c	\
 
 NAME	=	libmy.a
 
