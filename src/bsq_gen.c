@@ -30,9 +30,6 @@ static void put_size(int size, char *str)
     int res = size;
     int i = 0;
 
-    if (size < 0) {
-        my_putchar('-');
-    }
     for (int len = my_intlen(size); len > 0; len--) {
         pow = power(10, (len - 1));
         size = res / pow;
