@@ -150,6 +150,7 @@ Test(bsq_file, map3, . init = redirect_all_std) {
         "xxxxx\n");
 }
 
-Test(bsq_file, shape, . init = redirect_all_std, .exit_code = 84) {
+Test(bsq_file, shape, . init = redirect_all_std) {
     bsq_file("./assets/shape.txt");
+    cr_assert_stderr_eq_str("Invalid map format\n");
 }

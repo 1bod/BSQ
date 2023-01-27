@@ -34,6 +34,15 @@ static int start_bsq_gen(const char *const *argv)
         my_perror("Invalid board size\n");
         return 84;
     }
+    if (argv[2][0] == '\0') {
+        my_perror("Invalid pattern\n");
+    }
+    for (int i = 0; argv[2][i] != '\0'; i++) {
+        if (argv[2][i] != '.' && argv[2][i] != 'o') {
+            my_perror("Invalid pattern\n");
+            return 84;
+        }
+    }
     return bsq_gen(arg1, argv[2]);
 }
 

@@ -106,6 +106,7 @@ Test(bsq_gen, size70_cover10101010, . init = redirect_all_std) {
         ".o..o.o.o.o..o.o.o.o..o.o.o.o..o.o.o.o..o.o.o.o..o.o.o.o..o.o.o.o..o.o\n");
 }
 
-Test(bsq_gen, fail1, . init = redirect_all_std, .exit_code = 84) {
+Test(bsq_gen, fail1, . init = redirect_all_std) {
     bsq_gen(70, ".o.d.o.o.");
+    cr_assert_stderr_eq_str("Invalid map format\n");
 }

@@ -29,7 +29,7 @@ all:	$(NAME)
 
 $(NAME):
 	make -C lib
-	gcc -I./include $(MAIN) $(SRC) -L./ -lmy -o $(NAME) --coverage
+	gcc -I./include $(MAIN) $(SRC) -L./ -lmy -o $(NAME) -g
 
 clean:
 	make -C lib clean
@@ -44,7 +44,7 @@ re:	fclean all
 unit_tests:	re
 	gcc -I./include -g $(SRC) $(TEST_ARGS) tests/*.c -L./ -lmy -o $(TEST_OUT)
 
-run_tests:	unit_tests
+tests_run:	unit_tests
 	./$(TEST_OUT)
 
 .PHONY:	all $(NAME) clean fclean re

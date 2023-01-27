@@ -26,16 +26,6 @@ int check_file_error(const char *path)
     return 0;
 }
 
-static int simple_getnbr(const char *str)
-{
-    int result = str[0] - '0';
-
-    for (int i = 1; str[i] != '\0'; i++) {
-        result = result * 10 + (str[i] - '0');
-    }
-    return result;
-}
-
 static int free_and_exit(char **map, char *message)
 {
     for (int i = 0; map[i][0] != '\0'; i++) {
@@ -49,28 +39,30 @@ static int free_and_exit(char **map, char *message)
 static int check_char(char **map, char c)
 {
     if (c != '.' && c != 'o' && c != '\0') {
-        return free_and_exit(map, "Invalid map format\n");
+        return 84;
     }
+    return 0;
 }
 
 int check_map(char **map)
 {
     int row_count = 0;
-    int real_col_count = my_strlen(map[1]);
     int col_count;
-
+    int err = 0;
+    if (map[0][0] == '\0' || map[0][0] == '\n') {
+        return free_and_exit(map, "Invalid map format\n");
+    }
     for (int y = 1; map[y][0] != '\0'; y++) {
         row_count++;
         col_count = 0;
         while (map[y][col_count] != '\0') {
-            col_count++;
-            return check_char(map, map[y][col_count]);
+            err += check_char(map, map[y][col_count++]);
         }
-        if (col_count != real_col_count) {
+        if (col_count != my_strlen(map[1]) || err != 0) {
             return free_and_exit(map, "Invalid map format\n");
         }
     }
-    if (row_count != simple_getnbr(map[0])) {
+    if (row_count != my_getnbr(map[0])) {
         return free_and_exit(map, "Invalid map format\n");
     }
     return 0;

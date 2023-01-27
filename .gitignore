@@ -51,6 +51,11 @@ Module.symvers
 Mkfile.old
 dkms.conf
 
+.vscode
+.idea
+.vs
+.fleet
+
 vgcore.*
 *.gcno
 *.gcda
